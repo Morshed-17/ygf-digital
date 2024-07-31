@@ -24,6 +24,7 @@ export default function App() {
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
       maxWidth="2xl"
+      className="border-none bg-transparent relative z-50"
     >
       <NavbarContent className="sm:hidden" justify="start">
         <NavbarMenuToggle
@@ -77,17 +78,17 @@ export default function App() {
 
       <NavbarContent justify="end">
         <NavbarMenuItem>
-          <Button variant="default">Contact Now</Button>
+          <Button variant="default" className="rounded-full">Contact Now</Button>
         </NavbarMenuItem>
       </NavbarContent>
 
-      <NavbarMenu>
+      <NavbarMenu className="z-50 items-center justify-center ">
         <NavbarMenuItem>
           <Link
             href="/"
             className={`${
               pathname === "/" && "text-blue-600"
-            } hover:text-blue-600  transition-all`}
+            } hover:text-blue-600  transition-all text-3xl`}
           >
             Home
           </Link>
@@ -97,7 +98,7 @@ export default function App() {
             href="/about"
             className={`${
               pathname === "/about" && "text-blue-600"
-            } hover:text-blue-600  transition-all`}
+            } hover:text-blue-600  transition-all text-3xl`}
           >
             About
           </Link>
@@ -107,7 +108,7 @@ export default function App() {
             href="/case-studies"
             className={`${
               pathname === "/case-studies" && "text-blue-600"
-            } hover:text-blue-600  transition-all`}
+            } hover:text-blue-600  transition-all text-3xl`}
           >
             Case Studies
           </Link>
