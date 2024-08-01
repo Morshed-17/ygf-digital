@@ -6,14 +6,14 @@ const NewsLetter = () => {
     <div className=" bg-gray-100 pb-12">
       <div className="container px-4">
         <div
-          className=" px-6  py-6 rounded-lg xl:flex xl:items-center"
-          style={{ backgroundColor: "#483786" }}
+          className=" px-6  py-6 rounded-lg xl:flex xl:items-center bg-orange-400"
+         
         >
           <div className="xl:w-0 xl:flex-1">
-            <h2 className="text-2xl leading-8 font-extrabold tracking-tight text-white sm:text-3xl sm:leading-9">
+            <h2 className="text-2xl leading-8 font-extrabold text-white sm:text-3xl sm:leading-9">
               Get the latest updates!
             </h2>
-            <p className="mt-3 max-w-3xl text-lg leading-6 text-indigo-200">
+            <p className="mt-3 max-w-3xl text-lg leading-6 text-gray-700">
               Subscribe to our newsletter and stay updated on the latest
               developments.
             </p>
@@ -31,8 +31,9 @@ const NewsLetter = () => {
                 />
                 <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
                   <Button
-                  
-                    className="rounded-lg"
+
+                    variant={"destructive"}
+                    className="w-full"
                     type="submit"
                   >
                     Subscribe

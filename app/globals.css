@@ -67,4 +67,6 @@
     @apply bg-background text-foreground;
   }
 }
-
+p{
+  color: #6B7280;
+}

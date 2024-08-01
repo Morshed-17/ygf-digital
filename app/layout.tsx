@@ -23,8 +23,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" style={{ scrollBehavior: "smooth" }}>
-      <body className={`${inter.className} pattern-bg`}>
+    <html lang="en" suppressHydrationWarning={true} style={{ scrollBehavior: "smooth" }}>
+      <body className={`${inter.className} pattern-bg`} suppressHydrationWarning={true}>
         <Navbar />
         <main>{children}</main>
         <Footer />

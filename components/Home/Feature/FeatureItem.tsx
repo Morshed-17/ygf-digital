@@ -1,4 +1,6 @@
 // components/FeatureItem.js
+import { Mouse } from "lucide-react";
+import Link from "next/link";
 import React, { ReactNode } from "react";
 
 type Props = {
@@ -11,18 +13,16 @@ type Props = {
 const FeatureItem = ({ icon, title, description, link }: Props) => {
   return (
     <div className="max-w-md sm:mx-auto sm:text-center">
-      <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50 sm:mx-auto sm:w-24 sm:h-24">
+      <div className="flex items-center justify-center size-20 mb-4 rounded-full bg-orange-400 mx-auto ">
         {icon}
       </div>
-      <h6 className="mb-3 text-xl font-bold leading-5">{title}</h6>
-      <p className="mb-3 text-sm text-gray-900">{description}</p>
-      <a
-        href={link}
-        aria-label=""
-        className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
-      >
+      <h6 className="mb-3 text-xl font-bold leading-5 text-center text-gray-900">{title}</h6>
+      <p className="mb-3 text-center">{description}</p>
+      <div className="text-center">
+      <Link href="#" className="text-orange- font-bold  hover:text-orange-400 transition-all">
         Learn more
-      </a>
+      </Link>
+      </div>
     </div>
   );
 };
