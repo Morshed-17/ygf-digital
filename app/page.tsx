@@ -1,7 +1,9 @@
-import Banner from "@/components/Home/Banner";
+
+import Banner from "@/components/Home/Banner/Banner";
 import Brands from "@/components/Home/Brands";
 import FAQ from "@/components/Home/FAQ";
-import { Feature } from "@/components/Home/Feature";
+import { Feature } from "@/components/Home/Feature/Feature";
+
 import NewsLetter from "@/components/Home/NewsLetter";
 import Services from "@/components/Home/Services";
 import Testimonials from "@/components/Home/Testimonial";

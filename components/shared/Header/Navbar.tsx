@@ -82,7 +82,7 @@ export default function App() {
         </NavbarMenuItem>
       </NavbarContent>
 
-      <NavbarMenu className="z-50 items-center justify-center ">
+      <NavbarMenu className="z-50 items-center justify-center bg-transparent ">
         <NavbarMenuItem>
           <Link
             href="/"

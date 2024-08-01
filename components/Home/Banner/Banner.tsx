@@ -1,9 +1,10 @@
 import React from "react";
-import { Button } from "../ui/button";
-import Container from "../shared/Container";
-import { BackgroundBeams } from "../ui/background-beams";
-import MessyGradientBanner from "../ui/MessyGradientBanner";
+
 import Image from "next/image";
+import MessyGradientBanner from "@/components/ui/MessyGradientBanner";
+
+import { BackgroundBeams } from "@/components/ui/background-beams";
+import { Button } from "@/components/ui/button";
 
 const Banner = () => {
   return (

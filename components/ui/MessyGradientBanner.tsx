@@ -8,7 +8,7 @@ const MessyGradientBanner = ({ children }: {children: ReactNode}) => {
       <div className="absolute inset-0 bg-gradient-to-b from-blue-100 via-teal-200  opacity-30 animate-pulse"></div>
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-1/2 h-1/2 bg-gradient-to-br from-yellow-100 to-orange-200 rounded-full blur-3xl opacity-30 animate-blob"></div>
-        <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-gradient-to-tl from-blue-300 to-indigo-500 rounded-full blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+        <div className="absolute right-36 bottom-36 w-1/2 h-1/2 bg-gradient-to-tl from-blue-300 to-indigo-500 rounded-full blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1/2 h-1/2 bg-gradient-to-tr from-pink-300 to-purple-500 rounded-full blur-3xl opacity-30 animate-blob animation-delay-4000"></div>
       </div>
       <div className="relative z-10 h-full flex items-center justify-center">

@@ -2,6 +2,7 @@
 import React from 'react';
 import FeatureItem from './FeatureItem';
 
+
 const features = [
   {
     icon: (
