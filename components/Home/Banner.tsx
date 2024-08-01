@@ -13,7 +13,7 @@ const Banner = () => {
           <h3 className="text-lg text-blue-500 ">THE BEST DIGITAL AGENCY</h3>
           <h2 className=" text-4xl md:text-6xl lg:text-7xl leading-[1.2em] font-semibold mt-8">
             One stop solution for{" "}
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-700  to-orange-500">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-500 via-indigo-500  to-blue-700">
               Online Business
             </span>
           </h2>
