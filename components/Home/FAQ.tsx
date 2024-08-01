@@ -56,7 +56,7 @@ const FAQ = () => {
           </span>
         </h2>
         <div className="flex flex-col lg:flex-row gap-6 ">
-          <div className="flex-1 ">
+          <div className="flex-1 flex w-full">
             <Lottie
               animationData={animationData}
               loop={true} // Set to true to loop the animation
