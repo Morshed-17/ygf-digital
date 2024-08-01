@@ -9,7 +9,7 @@ const Banner = () => {
   return (
     <div className="mt-[-64px] ">
       <MessyGradientBanner>
-        <div className="flex items-center h-screen justify-center py-24 relative z-40">
+        <div className="flex items-center container px-4 h-screen justify-center py-24 relative z-40">
           <div className="max-w-[750px] text-center ">
             <h3 className="text-lg text-blue-500 ">THE BEST DIGITAL AGENCY</h3>
             <h2 className=" text-4xl md:text-6xl lg:text-7xl leading-[1.2em] font-semibold mt-8">

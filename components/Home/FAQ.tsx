@@ -56,7 +56,7 @@ const FAQ = () => {
           </span>
         </h2>
         <div className="flex flex-col lg:flex-row gap-6 ">
-          <div className="flex-1 flex w-full">
+          <div className="flex-1 flex justify-center">
             <Lottie
               animationData={animationData}
               loop={true} // Set to true to loop the animation
@@ -68,10 +68,10 @@ const FAQ = () => {
             <Accordion type="single" collapsible className="space-y-6 w-full">
               {faqs.map((faq) => (
                 <AccordionItem key={faq.value} value={faq.value}>
-                  <AccordionTrigger className="text-gray-300 text-left text-xl">
+                  <AccordionTrigger className="text-gray-300 text-left text-xl hover:no-underline">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-lg text-gray-300">
+                  <AccordionContent className="text-lg text-gray-400 text-left">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
