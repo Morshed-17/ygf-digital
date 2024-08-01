@@ -6,9 +6,16 @@ import {
   PenTool,
   ShieldCheck,
   PhoneCall,
+  LucideIcon,
 } from "lucide-react";
 
-const ServiceCard = ({ icon: Icon, title, description }) => (
+type Props = {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+};
+
+const ServiceCard = ({ icon: Icon, title, description }: Props) => (
   <div className="group relative overflow-hidden rounded-xl bg-white/10 p-8 shadow-lg backdrop-blur-lg transition-all duration-500 hover:bg-white/20 hover:shadow-2xl hover:-translate-y-2">
     <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 opacity-0 transition-opacity duration-500 group-hover:opacity-20"></div>
     <div className="relative z-10">
