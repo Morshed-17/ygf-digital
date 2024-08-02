@@ -78,7 +78,7 @@ export default function App() {
 
       <NavbarContent justify="end">
         <NavbarMenuItem>
-          <Button variant="default" className="rounded-full">Contact Now</Button>
+          <Link href='/contact'><Button variant="default" className="rounded-full">Contact Now</Button></Link>
         </NavbarMenuItem>
       </NavbarContent>
 
