@@ -51,6 +51,7 @@ export const Feature = () => {
           {features.map((feature, index) => (
             <div className="border p-5">
               <FeatureItem
+                key={index}
                 icon={feature.icon}
                 title={feature.title}
                 description={feature.description}
