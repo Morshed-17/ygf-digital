@@ -1,6 +1,15 @@
 import React from 'react';
 import Image from 'next/image';
 import { Briefcase, Users, ChartBar, MessageCircle } from 'lucide-react';
+import { Metadata } from 'next';
+
+
+// meta data 
+export const metadata: Metadata = {
+  title: "About",
+  description: "About YGF Digital", // description for this page
+  keywords: "About page, about our company" // set key words
+};
 
 const AboutUs = () => {
   return (

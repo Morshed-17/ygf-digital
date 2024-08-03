@@ -18,6 +18,8 @@ export default function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const pathname = usePathname();
 
+  if (pathname.includes("dashboard")) return <div className="hidden"></div>;
+  if (pathname.includes("api/auth/signin")) return <div className="hidden"></div>;
   return (
     <Navbar
       isBordered
@@ -78,7 +80,11 @@ export default function App() {
 
       <NavbarContent justify="end">
         <NavbarMenuItem>
-          <Link href='/contact'><Button variant="default" className="rounded-full">Contact Now</Button></Link>
+          <Link href="/contact">
+            <Button variant="default" className="rounded-full">
+              Contact Now
+            </Button>
+          </Link>
         </NavbarMenuItem>
       </NavbarContent>
 

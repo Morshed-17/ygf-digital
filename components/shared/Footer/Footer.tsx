@@ -1,3 +1,4 @@
+"use client";
 import {
   IconBrandDribbble,
   IconBrandFacebook,
@@ -6,9 +7,13 @@ import {
   IconBrandLinkedin,
 } from "@tabler/icons-react";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import React from "react";
 
 const Footer = () => {
+  const pathname = usePathname();
+  if (pathname.includes("dashboard")) return <div className="hidden"></div>;
+  if (pathname.includes("api/auth/signin")) return <div className="hidden"></div>;
   return (
     <footer className="bg-gradient-to-r from-blue-100 via-indigo-100 to-orange-100">
       <div className="container px-4 py-16 mx-auto sm:px-6 lg:px-8">

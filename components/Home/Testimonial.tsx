@@ -13,49 +13,49 @@ const testimonials = [
     title: "CEO, Example Company",
     quote:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    image: "/api/placeholder/150/150",
+    image: "/images/ecom-demo.jpg",
   },
   {
     name: "Jane Smith",
     title: "CTO, Another Company",
     quote:
       "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    image: "/api/placeholder/150/150",
+    image: "/images/ecom-demo.jpg",
   },
   {
     name: "Jane Smith",
     title: "CTO, Another Company",
     quote:
       "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    image: "/api/placeholder/150/150",
+    image: "/images/ecom-demo.jpg",
   },
   {
     name: "Jane Smith",
     title: "CTO, Another Company",
     quote:
       "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    image: "/api/placeholder/150/150",
+    image: "/images/ecom-demo.jpg",
   },
   {
     name: "Jane Smith",
     title: "CTO, Another Company",
     quote:
       "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    image: "/api/placeholder/150/150",
+    image: "/images/ecom-demo.jpg",
   },
   {
     name: "Jane Smith",
     title: "CTO, Another Company",
     quote:
       "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    image: "/api/placeholder/150/150",
+    image: "/images/ecom-demo.jpg",
   },
   {
     name: "Jane Smith",
     title: "CTO, Another Company",
     quote:
       "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    image: "/api/placeholder/150/150",
+    image: "/images/ecom-demo.jpg",
   },
   // ... add more testimonials as needed
 ];
@@ -126,7 +126,6 @@ const Testimonial = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-       
       </div>
     </div>
   );

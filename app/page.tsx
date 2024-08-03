@@ -4,7 +4,7 @@ import FAQ from "@/components/Home/FAQ";
 import { Feature } from "@/components/Home/Feature/Feature";
 
 import NewsLetter from "@/components/Home/NewsLetter";
-import Services from "@/components/Home/Services";
+import Services from "@/components/Home/services/Services";
 import TechShowcase from "@/components/Home/TechStack/TechShowcase";
 import Testimonials from "@/components/Home/Testimonial";
 import WhyChooseUs from "@/components/Home/WhyChooseUs";
