@@ -13,13 +13,21 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import MenuMobile from "./MenuMobile";
 
+const navlinks = [
+  { name: "Home", path: "/" },
+  { name: "About", path: "/about" },
+  { name: "Projects", path: "/projects" },
+  { name: "Case Studies", path: "/case-studies" },
+];
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const pathname = usePathname();
 
   if (pathname.includes("dashboard")) return <div className="hidden"></div>;
-  if (pathname.includes("api/auth/signin")) return <div className="hidden"></div>;
+  if (pathname.includes("api/auth/signin"))
+    return <div className="hidden"></div>;
   return (
     <Navbar
       isBordered
@@ -46,36 +54,18 @@ export default function App() {
         </NavbarBrand>
       </NavbarContent>
       <NavbarContent className="hidden sm:flex flex-1 gap-4" justify="center">
-        <NavbarItem>
-          <Link
-            href="/"
-            className={`${
-              pathname === "/" && "text-blue-600"
-            } hover:text-blue-600  transition-all`}
-          >
-            Home
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link
-            href="/about"
-            className={`${
-              pathname === "/about" && "text-blue-600"
-            } hover:text-blue-600  transition-all`}
-          >
-            About
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link
-            href="/case-studies"
-            className={`${
-              pathname === "/case-studies" && "text-blue-600"
-            } hover:text-blue-600  transition-all`}
-          >
-            Case Studies
-          </Link>
-        </NavbarItem>
+        {navlinks.map((item, index) => (
+          <NavbarItem key={index}>
+            <Link
+              href={item.path}
+              className={`${
+                pathname === item.path && "text-blue-600"
+              } hover:text-blue-600  transition-all`}
+            >
+              {item.name}
+            </Link>
+          </NavbarItem>
+        ))}
       </NavbarContent>
 
       <NavbarContent justify="end">
@@ -88,38 +78,7 @@ export default function App() {
         </NavbarMenuItem>
       </NavbarContent>
 
-      <NavbarMenu className="z-50 items-center justify-center bg-transparent ">
-        <NavbarMenuItem>
-          <Link
-            href="/"
-            className={`${
-              pathname === "/" && "text-blue-600"
-            } hover:text-blue-600  transition-all text-3xl`}
-          >
-            Home
-          </Link>
-        </NavbarMenuItem>
-        <NavbarMenuItem>
-          <Link
-            href="/about"
-            className={`${
-              pathname === "/about" && "text-blue-600"
-            } hover:text-blue-600  transition-all text-3xl`}
-          >
-            About
-          </Link>
-        </NavbarMenuItem>
-        <NavbarMenuItem>
-          <Link
-            href="/case-studies"
-            className={`${
-              pathname === "/case-studies" && "text-blue-600"
-            } hover:text-blue-600  transition-all text-3xl`}
-          >
-            Case Studies
-          </Link>
-        </NavbarMenuItem>
-      </NavbarMenu>
+      <MenuMobile navlinks={navlinks} setIsMenuOpen={setIsMenuOpen} />
     </Navbar>
   );
 }
