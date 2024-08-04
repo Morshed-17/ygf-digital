@@ -30,6 +30,7 @@ export default function App() {
     return <div className="hidden"></div>;
   return (
     <Navbar
+      position="static"
       isBordered
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}

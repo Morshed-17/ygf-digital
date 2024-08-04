@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { ArrowRight, ChevronDown } from "lucide-react";
 
-
 interface CaseStudyProps {
   title: string;
   category: string;
@@ -22,9 +21,14 @@ const CaseStudy: React.FC<CaseStudyProps> = ({
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+    <div className="bg-gray-50  rounded-lg shadow-lg overflow-hidden">
       <div className="relative h-64">
-        <Image src='/images/ecom-demo.jpg' alt={title} layout="fill" objectFit="cover" />
+        <Image
+          src="/images/ecom-demo.jpg"
+          alt={title}
+          layout="fill"
+          objectFit="cover"
+        />
       </div>
       <div className="p-6">
         <span className="text-blue-600 font-semibold text-sm mb-2 block">
@@ -99,8 +103,8 @@ const CaseStudiesPage: React.FC = () => {
   ];
 
   return (
-    <div className="bg-gray-100 min-h-screen">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div className="bg-gray-100  mt-[-64px]">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-12">
         <h1 className="text-4xl font-bold mb-4 text-center">
           Our Case Studies
         </h1>

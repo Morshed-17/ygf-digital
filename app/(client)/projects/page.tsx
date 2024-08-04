@@ -14,7 +14,7 @@ interface Project {
 }
 
 async function getProjects(): Promise<Project[]> {
-  const query = `*[_type== 'project']{
+  const query = `*[_type== 'project'] | order(_createdAt desc){
   title,
     _id,
     link,
@@ -22,7 +22,7 @@ async function getProjects(): Promise<Project[]> {
     tags,
     'imageUrl': image.asset->url
 }`;
-  const data = await client.fetch(query);
+  const data = await client.fetch(query, {}, { next: { revalidate: 30 } });
   return data;
 }
 
@@ -33,8 +33,8 @@ export default async function ProjectsPage() {
     <div className=" bg-gray-50 mt-[-64px]">
       {" "}
       <div className="container pt-32 pb-12">
-        <h1 className="text-4xl font-bold  ">Our Projects</h1>
-        <p className="text-lg mt-4">Check out what projects we have created</p>
+        <h1 className="text-4xl font-bold  text-center">Our Projects</h1>
+        <p className="text-lg mt-4 text-center">Check out what projects we have created</p>
         <div className="py-12 grid md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-12 grid-cols-1">
           {projects?.map((item) => (
             <a
@@ -76,5 +76,3 @@ export default async function ProjectsPage() {
     </div>
   );
 }
-
-export const revalidate = 5;
