@@ -70,3 +70,20 @@
 p{
   color: #6B7280;
 }
+
+/* In your global CSS file */
+.prose h1 {
+  @apply text-4xl font-bold mt-8 mb-4;
+}
+
+.prose h2 {
+  @apply text-3xl font-bold mt-6 mb-3;
+}
+
+.prose h3 {
+  @apply text-2xl font-semibold mt-4 mb-2;
+}
+
+.prose p {
+  @apply mb-4;
+}

@@ -32,17 +32,15 @@ export default function RootLayout({
       suppressHydrationWarning={true}
       style={{ scrollBehavior: "smooth" }}
     >
-      <AuthProvider>
-        <body
-          className={`${inter.className} pattern-bg`}
-          suppressHydrationWarning={true}
-        >
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
-          <Toaster />
-        </body>
-      </AuthProvider>
+      <body
+        className={`${inter.className} pattern-bg`}
+        suppressHydrationWarning={true}
+      >
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
+        <Toaster />
+      </body>
     </html>
   );
 }
