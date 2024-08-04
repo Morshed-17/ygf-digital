@@ -184,9 +184,9 @@ const TechShowcase: React.FC = () => {
             </div>
             <div className="relative">
               <TabsList className="flex justify-start md:justify-center space-x-1 py-2 overflow-x-auto scrollbar-hide">
-                {techCategories.map((category) => (
+                {techCategories.map((category, index) => (
                   <TabsTrigger
-                    key={category.name}
+                    key={index}
                     value={category.name}
                     className="px-3 py-2 text-sm font-medium rounded-full whitespace-nowrap flex-shrink-0"
                   >
@@ -206,8 +206,8 @@ const TechShowcase: React.FC = () => {
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.3 }}
               >
-                {techCategories.map((category) => (
-                  <TabsContent key={category.name} value={category.name}>
+                {techCategories.map((category, index) => (
+                  <TabsContent key={index} value={category.name}>
                     <Card>
                       <CardContent className="pt-6">
                         <TechGrid technologies={category.technologies} />
@@ -235,8 +235,8 @@ const TechShowcase: React.FC = () => {
               "IoT",
               "AR/VR",
               "Edge Computing",
-            ].map((tech) => (
-              <Badge key={tech} variant="outline" className="text-sm py-1 px-3">
+            ].map((tech, index) => (
+              <Badge key={index} variant="outline" className="text-sm py-1 px-3">
                 {tech}
               </Badge>
             ))}

@@ -66,8 +66,8 @@ const FAQ = () => {
           </div>
           <div className="flex-1">
             <Accordion type="single" collapsible className="space-y-6 w-full">
-              {faqs.map((faq) => (
-                <AccordionItem key={faq.value} value={faq.value}>
+              {faqs.map((faq, index) => (
+                <AccordionItem key={index} value={faq.value}>
                   <AccordionTrigger className="text-gray-300 text-left text-xl hover:no-underline">
                     {faq.question}
                   </AccordionTrigger>

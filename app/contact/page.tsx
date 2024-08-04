@@ -139,9 +139,9 @@ const ContactUsPage: React.FC = () => {
                 <h3 className="text-xl font-semibold mb-4">Follow Us</h3>
                 <div className="flex space-x-4">
                   {["facebook", "twitter", "linkedin", "instagram"].map(
-                    (social) => (
+                    (social, index) => (
                       <Button
-                        key={social}
+                        key={index}
                         variant="outline"
                         size="icon"
                         asChild
