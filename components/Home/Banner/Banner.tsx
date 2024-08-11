@@ -1,9 +1,7 @@
 import React from "react";
 
-import Image from "next/image";
 import MessyGradientBanner from "@/components/ui/MessyGradientBanner";
 
-import { BackgroundBeams } from "@/components/ui/background-beams";
 import { Button } from "@/components/ui/button";
 
 const Banner = () => {
@@ -29,7 +27,6 @@ const Banner = () => {
             </Button>
           </div>
         </div>
-        <BackgroundBeams />
       </MessyGradientBanner>
     </div>
   );
