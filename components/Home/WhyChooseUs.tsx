@@ -1,7 +1,7 @@
-
 import { Check, DollarSign, Lock } from "lucide-react";
 import React from "react";
 import { Button } from "../ui/button";
+import Image from "next/image";
 
 const WhyChooseUs = () => {
   return (
@@ -23,7 +23,7 @@ const WhyChooseUs = () => {
               <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
                 <div className="relative">
                   <dt className=" font-semibold  flex items-center gap-2 text-gray-300">
-                   <Check className="text-indigo-400"/>
+                    <Check className="text-indigo-400" />
                     <p>Template driven</p>
                   </dt>
                   <p className="inline text-gray-400">
@@ -33,7 +33,7 @@ const WhyChooseUs = () => {
                 </div>
                 <div className="relative">
                   <dt className=" font-semibold  flex items-center gap-2 text-gray-300">
-                   <Lock className="text-indigo-400"/>
+                    <Lock className="text-indigo-400" />
                     <p>Template driven</p>
                   </dt>
                   <p className="inline text-gray-400">
@@ -43,7 +43,7 @@ const WhyChooseUs = () => {
                 </div>
                 <div className="relative">
                   <dt className=" font-semibold  flex items-center gap-2 text-gray-300">
-                   <DollarSign className="text-indigo-400"/>
+                    <DollarSign className="text-indigo-400" />
                     <p>Template driven</p>
                   </dt>
                   <p className="inline text-gray-400">
@@ -51,16 +51,21 @@ const WhyChooseUs = () => {
                     to create and apply templated content to your media.
                   </p>
                 </div>
-                
               </dl>
             </div>
             <div className="mt-10 flex flex-col md:flex-row md:items-center gap-x-6 gap-y-4">
               <Button className="rounded-full">Contact Now</Button>
-              <Button variant="ghost" className="border border-blue-400 rounded-full text-blue-400">Request a quote</Button>
+              <Button
+                variant="ghost"
+                className="border border-blue-400 rounded-full text-blue-400"
+              >
+                Request a quote
+              </Button>
             </div>
           </div>
-          <img
-            
+          <Image
+            width={1080}
+            height={1080}
             src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw4fHxjb21wdXRlcnxlbnwwfDB8fHwxNjkxODE2NjY3fDA&ixlib=rb-4.0.3&q=80&w=1080"
             alt="Product screenshot"
             className="rounded-lg self-center"

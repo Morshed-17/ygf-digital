@@ -1,7 +1,7 @@
 import Container from "@/components/shared/Container";
-import { ArrowRight } from "lucide-react";
-import { ClientToUs } from "./ClientToUs";
 
+import { ClientToUs } from "./ClientToUs";
+import Image from "next/image";
 
 const AboutComapany = () => {
   return (
@@ -16,7 +16,7 @@ const AboutComapany = () => {
                 Our Dream is <br /> Global Learning Transformation
               </h1>
               {/* Wrapper div to take up the remaining space */}
-              <ClientToUs/>
+              <ClientToUs />
               <div className="flex-grow">
                 <p className="text-gray-600">
                   Kawruh was founded by Robert Anderson, a passionate lifelong
@@ -35,13 +35,14 @@ const AboutComapany = () => {
             {/* Right Side Image and Stats */}
             <div className="grid grid-cols-1 gap-4 order-1 lg:order-2">
               {/* Image */}
-              
-                <img
-                  src="https://images.unsplash.com/photo-1531973576160-7125cd663d86?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt=""
-                  className="rounded-xl max-h-96 w-full object-cover  shadow-sm"
-                />
-             
+
+              <Image
+                src="https://images.unsplash.com/photo-1531973576160-7125cd663d86?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="About Comapany"
+                width={1000}
+                height={1000}
+                className="rounded-xl max-h-96 w-full object-cover  shadow-sm"
+              />
 
               {/* Stats */}
               <div className="grid grid-cols-2 gap-4 bg-white p-6 rounded-xl shadow-sm">

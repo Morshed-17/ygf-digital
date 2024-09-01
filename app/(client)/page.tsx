@@ -8,7 +8,7 @@ import NewsLetter from "@/components/Home/NewsLetter";
 import Services from "@/components/Home/services/Services";
 import { TechShowcase } from "@/components/Home/TechStack/TechShowcase";
 
-import Testimonials from "@/components/Home/Testimonial";
+import Testimonials from "@/components/Home/Testimonials/Testimonial";
 import WhyChooseUs from "@/components/Home/WhyChooseUs";
 
 
@@ -23,7 +23,7 @@ export default function Home() {
       <Testimonials />
       <Brands />
       <NewsLetter />
-      <FAQ />
+      <FAQ /> 
       {/* <MouseFollower/> */}
     </div>
   );

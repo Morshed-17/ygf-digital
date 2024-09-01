@@ -22,7 +22,6 @@ export const cloudProps: Omit<ICloud, "children"> = {
   },
   options: {
     reverse: true,
-    
     depth: 1,
     wheelZoom: false,
     imageScale: 2,
@@ -34,7 +33,6 @@ export const cloudProps: Omit<ICloud, "children"> = {
     outlineColour: "#0000",
     maxSpeed: 0.04,
     minSpeed: 0.02,
-    // dragControl: false,
   },
 };
 
@@ -66,19 +64,26 @@ type IconData = Awaited<ReturnType<typeof fetchSimpleIcons>>;
 
 export default function IconCloud({ iconSlugs }: DynamicCloudProps) {
   const [data, setData] = useState<IconData | null>(null);
+  const [loading, setLoading] = useState(true);
   const { theme } = useTheme();
 
   useEffect(() => {
-    fetchSimpleIcons({ slugs: iconSlugs }).then(setData);
+    setLoading(true);
+    fetchSimpleIcons({ slugs: iconSlugs })
+      .then(setData)
+      .finally(() => setLoading(false));
   }, [iconSlugs]);
 
   const renderedIcons = useMemo(() => {
     if (!data) return null;
-
     return Object.values(data.simpleIcons).map((icon) =>
-      renderCustomIcon(icon, theme || "light"),
+      renderCustomIcon(icon, theme || "light")
     );
   }, [data, theme]);
+
+  if (loading) {
+    return <div>Loading icons...</div>;
+  }
 
   return (
     // @ts-ignore

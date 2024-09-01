@@ -47,22 +47,5 @@ export const services = [
     description:
       "Develop robust software solutions that meet your unique business requirements.",
   },
-  {
-    icon: Lightbulb,
-    title: "Product Development",
-    description:
-      "Bring your ideas to life with our end-to-end product development services.",
-  },
-  {
-    icon: Brain,
-    title: "Machine Learning & AI Development",
-    description:
-      "Leverage the power of AI to transform your data into actionable insights.",
-  },
-  {
-    icon: Cloud,
-    title: "IT, DevOps & Cloud Solutions",
-    description:
-      "Optimize your infrastructure with our cutting-edge IT, DevOps, and cloud services.",
-  },
+  
 ];

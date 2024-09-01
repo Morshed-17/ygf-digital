@@ -1,50 +1,13 @@
-"use client";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import animationData from "../../public/lotties/faq-animation.json";
-import Lottie from "lottie-react";
 
-const faqs = [
-  {
-    value: "item-1",
-    question: "Is it accessible?",
-    answer: "Yes. It adheres to the WAI-ARIA design pattern.",
-  },
-  {
-    value: "item-2",
-    question: "How can I customize the animation?",
-    answer:
-      "You can customize the animation by adjusting the props passed to the Lottie component, such as loop, autoplay, and style.",
-  },
-  {
-    value: "item-3",
-    question: "Can I use my own animation files?",
-    answer:
-      "Yes, you can use your own Lottie animation JSON files. Just place them in the public directory and import them into your component.",
-  },
-  {
-    value: "item-4",
-    question: "Does it support server-side rendering (SSR)?",
-    answer:
-      "Yes, Next.js supports server-side rendering, and you can use Lottie animations within your SSR components.",
-  },
-  {
-    value: "item-5",
-    question: "What is the best way to optimize Lottie animations?",
-    answer:
-      "To optimize Lottie animations, use compressed JSON files, minimize the number of layers, and optimize animation settings.",
-  },
-  {
-    value: "item-6",
-    question: "Are Lottie animations supported on all browsers?",
-    answer:
-      "Most modern browsers support Lottie animations. However, it’s a good practice to test across different browsers to ensure compatibility.",
-  },
-];
+import Lottie from "lottie-react";
+import { faqs } from "@/data/faq";
+import FAQLottie from "./FAQLottie";
 
 const FAQ = () => {
   return (
@@ -57,12 +20,7 @@ const FAQ = () => {
         </h2>
         <div className="flex flex-col lg:flex-row gap-6 ">
           <div className="flex-1 flex justify-center">
-            <Lottie
-              animationData={animationData}
-              loop={true} // Set to true to loop the animation
-              autoplay={true} // Set to true to play the animation automatically
-              className="max-w-[500px] max-h-[500px] " // Customize the size of the animation
-            />
+            <FAQLottie />
           </div>
           <div className="flex-1">
             <Accordion type="single" collapsible className="space-y-6 w-full">
