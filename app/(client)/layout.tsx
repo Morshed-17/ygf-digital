@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
-import "./globals.css";
+import './globals.css'
 
 import Navbar from "@/components/shared/Header/Navbar";
 import Footer from "@/components/shared/Footer/Footer";
-import AuthProvider from "@/services/AuthProvider";
 import { Toaster } from "sonner";
 const inter = Outfit({
   subsets: ["latin"],

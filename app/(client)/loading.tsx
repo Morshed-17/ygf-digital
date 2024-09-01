@@ -4,7 +4,7 @@ import { grid } from "ldrs";
 
 // Default values shown
 
-const loading = () => {
+const Loading = () => {
   useEffect(() => {
     async function getLoader() {
       const { grid } = await import("ldrs");
@@ -19,4 +19,4 @@ const loading = () => {
   );
 };
 
-export default loading;
+export default Loading;

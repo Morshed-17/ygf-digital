@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Navbar,
   NavbarBrand,
@@ -22,20 +22,35 @@ const navlinks = [
   { name: "Case Studies", path: "/case-studies" },
 ];
 export default function App() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [hasScrolled, setHasScrolled] = useState(false);
   const pathname = usePathname();
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      if (scrollTop > 50) {
+        setHasScrolled(true);
+      } else {
+        setHasScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   if (pathname.includes("dashboard")) return <div className="hidden"></div>;
   if (pathname.includes("api/auth/signin"))
     return <div className="hidden"></div>;
   return (
     <Navbar
-      position="static"
-      isBordered
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
       maxWidth="2xl"
-      className="border-none bg-transparent relative z-50"
+      shouldHideOnScroll
+      className={`transition-colors duration-300 z-50 ${
+        hasScrolled ? "bg-white/80" : "bg-transparent"
+      }`}
     >
       <NavbarContent className="sm:hidden" justify="start">
         <NavbarMenuToggle
