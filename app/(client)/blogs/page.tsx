@@ -26,8 +26,8 @@ export default async function CaseStudies() {
   const caseStudies = await getCaseStudies();
 
   return (
-    <div className="container mx-auto px-4">
-      <h1 className="text-3xl font-bold my-8">Our Blogs</h1>
+    <div className="container mx-auto px-4 py-16">
+      <h1 className="text-4xl font-bold text-center">Our Blogs</h1>
       <CaseStudiesGrid caseStudies={caseStudies} />
     </div>
   );

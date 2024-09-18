@@ -1,141 +1,218 @@
-import React from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
-import { Briefcase, Users, ChartBar, MessageCircle } from "lucide-react";
-import { Metadata } from "next";
-import OurTeam from "@/components/about/OurTeam";
+import {
+  ArrowRight,
+  Code,
+  Palette,
+  Rocket,
+  Search,
+  ShoppingCart,
+  Smartphone,
+  Target,
+  Eye,
+} from "lucide-react";
+import SectionTitle from "@/components/ui/sectionTitle";
 
-// meta data
-export const metadata: Metadata = {
-  title: "About",
-  description: "About YGF Digital", // description for this page
-  keywords: "About page, about our company", // set key words
-};
-
-const AboutUs = () => {
+export default function AboutUs() {
   return (
-    <div className="bg-gradient-to-b mt-[-64px] from-gray-50 to-white text-gray-800">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-12">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold mb-4">About Our Agency</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Empowering businesses with innovative digital solutions since 2010.
-          </p>
-        </div>
+    <div className="bg-white">
+      <div className="container mx-auto px-4 py-16 space-y-24">
+        <SectionTitle title="About Us" />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-20 items-center">
-          <div>
-            <h2 className="text-3xl font-semibold mb-6">Our Mission</h2>
-            <p className="text-lg leading-relaxed text-gray-700 mb-6">
-              At [Your Agency Name], we are committed to delivering exceptional
-              digital solutions that drive growth and success for our clients.
-              Our mission is to combine innovative technology with strategic
-              thinking to create impactful digital experiences.
-            </p>
-            <ul className="space-y-4">
-              {[
-                {
-                  icon: <Briefcase className="w-6 h-6 text-blue-600" />,
-                  text: "Tailored solutions for each client",
-                },
-                {
-                  icon: <Users className="w-6 h-6 text-blue-600" />,
-                  text: "Collaborative approach",
-                },
-                {
-                  icon: <ChartBar className="w-6 h-6 text-blue-600" />,
-                  text: "Data-driven strategies",
-                },
-              ].map((item, index) => (
-                <li key={index} className="flex items-center space-x-3">
-                  {item.icon}
-                  <span>{item.text}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="relative h-96 rounded-lg overflow-hidden shadow-xl">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="relative group">
             <Image
-              src="/images/ecom-demo.jpg"
-              alt="Team collaboration"
-              layout="fill"
-              objectFit="cover"
+              src="/images/about.jpg"
+              alt="Our team collaborating in a modern office"
+              width={600}
+              height={400}
+              className="relative rounded-lg shadow-2xl"
             />
           </div>
+          <div className="space-y-6">
+            <h2 className="text-3xl font-semibold text-gray-800">Who We Are</h2>
+            <p className="text-lg text-gray-600">
+              We are a team of passionate digital innovators, committed to
+              transforming businesses through cutting-edge technology and
+              creative solutions. With a blend of expertise in various digital
+              domains, we craft tailored strategies that drive growth and
+              success in the ever-evolving digital landscape.
+            </p>
+            <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white">
+              Get a Quote <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+          </div>
         </div>
-        <OurTeam />
 
-        <div className="mb-20">
-          <h2 className="text-3xl font-semibold mb-8 text-center">
+        <div className="grid md:grid-cols-2 gap-12">
+          <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 border-none">
+            <CardContent className="p-8">
+              <div className="flex items-center mb-4">
+                <Target className="h-8 w-8 text-blue-600 mr-4" />
+                <h2 className="text-3xl font-semibold text-gray-800">
+                  Our Mission
+                </h2>
+              </div>
+              <p className="text-gray-600">
+                To empower businesses with innovative digital solutions that
+                drive growth, enhance user experiences, and create lasting value
+                in the digital ecosystem. We strive to be at the forefront of
+                technological advancements, ensuring our clients stay ahead in
+                their respective industries.
+              </p>
+            </CardContent>
+          </Card>
+          <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 border-none">
+            <CardContent className="p-8">
+              <div className="flex items-center mb-4">
+                <Eye className="h-8 w-8 text-purple-600 mr-4" />
+                <h2 className="text-3xl font-semibold text-gray-800">
+                  Our Vision
+                </h2>
+              </div>
+              <p className="text-gray-600">
+                To be the catalyst for digital transformation across industries,
+                recognized globally for our innovative solutions, unparalleled
+                expertise, and commitment to client success. We envision a world
+                where businesses of all sizes can harness the full potential of
+                digital technologies to achieve their goals and make a positive
+                impact.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+
+        <div className="space-y-12">
+          <h2 className="text-3xl font-semibold text-center text-gray-800">
             Our Expertise
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             {[
-              { title: "Web Design & Development", icon: "🌐" },
-              { title: "Digital Marketing & SEO", icon: "📈" },
-              { title: "Brand Strategy", icon: "🎨" },
-              { title: "E-commerce Solutions", icon: "🛒" },
-              { title: "Mobile App Development", icon: "📱" },
-              { title: "Cloud Services", icon: "☁️" },
+              {
+                title: "Web Development",
+                icon: <Code className="h-8 w-8 mb-4 text-blue-600" />,
+                description:
+                  "Creating responsive, user-friendly websites that drive engagement and conversions.",
+              },
+              {
+                title: "Digital Marketing & SEO",
+                icon: <Search className="h-8 w-8 mb-4 text-purple-600" />,
+                description:
+                  "Boosting online visibility and driving targeted traffic to maximize ROI.",
+              },
+              {
+                title: "Mobile App Development",
+                icon: <Smartphone className="h-8 w-8 mb-4 text-blue-600" />,
+                description:
+                  "Developing intuitive, high-performance mobile applications for iOS and Android.",
+              },
+              {
+                title: "E-commerce Solutions",
+                icon: <ShoppingCart className="h-8 w-8 mb-4 text-purple-600" />,
+                description:
+                  "Building secure, scalable online stores that enhance the shopping experience.",
+              },
+              {
+                title: "UI/UX Design",
+                icon: <Palette className="h-8 w-8 mb-4 text-blue-600" />,
+                description:
+                  "Crafting visually stunning, user-centric designs that elevate brand identity.",
+              },
+              {
+                title: "Custom Software Development",
+                icon: <Rocket className="h-8 w-8 mb-4 text-purple-600" />,
+                description:
+                  "Delivering tailored software solutions to address unique business challenges.",
+              },
             ].map((service, index) => (
+              <Card
+                key={index}
+                className="bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 border-none"
+              >
+                <CardContent className="p-6 text-center">
+                  {service.icon}
+                  <h3 className="text-xl font-semibold mb-2 text-gray-800">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-600">{service.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+
+        <div className="space-y-12">
+          <h2 className="text-3xl font-semibold text-center text-gray-800">
+            Our Impact
+          </h2>
+          <div className="flex flex-wrap justify-center gap-8">
+            {[
+              { value: "100+", label: "Projects Completed" },
+              { value: "50+", label: "Happy Clients" },
+              { value: "5+", label: "Years of Experience" },
+            ].map((stat, index) => (
               <div
                 key={index}
-                className="bg-white p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl"
+                className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 w-64"
               >
-                <div className="text-4xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-                <p className="text-gray-600">
-                  Innovative solutions tailored to your needs.
+                <p className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 mb-2">
+                  {stat.value}
                 </p>
+                <p className="text-lg text-gray-600">{stat.label}</p>
               </div>
             ))}
           </div>
         </div>
 
-        <div className="mb-20">
-          <h2 className="text-3xl font-semibold mb-8 text-center">
+        <div className="space-y-12">
+          <h2 className="text-3xl font-semibold text-center text-gray-800">
             Our Approach
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-indigo-900 text-white p-8 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-semibold mb-4">
-                Client-Centric Focus
-              </h3>
-              <p className="text-lg leading-relaxed">
-                We prioritize understanding your unique business needs and
-                goals. Our approach involves close collaboration, ensuring that
-                every solution is tailored to your specific requirements and
-                market challenges.
-              </p>
-            </div>
-            <div className="bg-gray-100 p-8 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-semibold mb-4">Agile Methodology</h3>
-              <p className="text-lg leading-relaxed text-gray-700">
-                Our team employs agile methodologies to ensure flexibility,
-                rapid iteration, and continuous improvement throughout the
-                project lifecycle. This approach allows us to adapt quickly to
-                changing needs and deliver results efficiently.
-              </p>
-            </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Understand",
+                description:
+                  "We begin by deeply understanding your business, goals, and challenges.",
+              },
+              {
+                title: "Innovate",
+                description:
+                  "Our team crafts innovative solutions tailored to your specific needs.",
+              },
+              {
+                title: "Deliver",
+                description:
+                  "We implement and deliver high-quality solutions that drive tangible results.",
+              },
+            ].map((step, index) => (
+              <div key={index} className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mb-4 mx-auto">
+                  {index + 1}
+                </div>
+                <h3 className="text-xl font-semibold mb-2 text-gray-800">
+                  {step.title}
+                </h3>
+                <p className="text-gray-600">{step.description}</p>
+              </div>
+            ))}
           </div>
         </div>
-      </div>
 
-      <div className="bg-indigo-900 py-16 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-semibold mb-4">
-            Ready to elevate your digital presence?
+        <div className="text-center bg-gradient-to-r from-blue-600 to-purple-600 p-12 rounded-lg shadow-2xl">
+          <h2 className="text-3xl font-semibold mb-4 text-white">
+            Ready to Transform Your Digital Presence?
           </h2>
-          <p className="text-xl mb-8 text-gray-400">
-            Let's discuss how we can help your business thrive in the digital
-            landscape.
+          <p className="text-lg text-blue-100 mb-6">
+            Let's collaborate to bring your vision to life and drive your
+            business forward in the digital realm.
           </p>
-          <button className="bg-white text-blue-600 py-3 px-8 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors duration-300">
-            Contact Us
-          </button>
+          <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50">
+            Get a Free Consultation <ArrowRight className="ml-2 h-4 w-4" />
+          </Button>
         </div>
       </div>
     </div>
   );
-};
-
-export default AboutUs;
+}

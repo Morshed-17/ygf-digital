@@ -30,9 +30,8 @@ export default function LandingPage() {
           brands and companies:
         </p>
 
-        <div className="flex flex-wrap items-center justify-between  gap-8">
+        <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-6 gap-8">
           {[
-            
             "/images/brands/bookbin.jpg",
             "/images/brands/kidlon.jpg",
             "/images/brands/kodomo.jpg",
@@ -40,7 +39,7 @@ export default function LandingPage() {
             "/images/brands/pentagon.webp",
           ].map((company, index) => (
             <Image
-            key={index}
+              key={index}
               height={150}
               width={150}
               src={company}
