@@ -27,7 +27,7 @@ export default async function CaseStudies() {
 
   return (
     <div className="container mx-auto px-4">
-      <h1 className="text-3xl font-bold my-8">Case Studies</h1>
+      <h1 className="text-3xl font-bold my-8">Our Blogs</h1>
       <CaseStudiesGrid caseStudies={caseStudies} />
     </div>
   );

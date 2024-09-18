@@ -12,7 +12,7 @@ const CaseStudiesGrid = ({ caseStudies }: { caseStudies: CaseStudy[] }) => {
           key={study._id}
           className="transform transition-transform "
         >
-          <Link href={`/case-studies/${study.slug.current}`} className="block">
+          <Link href={`/blogs/${study.slug.current}`} className="block">
             <div className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 h-full flex flex-col">
               {study.mainImage && (
                 <div className="relative h-48 overflow-hidden">
