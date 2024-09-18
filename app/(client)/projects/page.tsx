@@ -43,7 +43,7 @@ export default function ProjectsPage() {
   }, [selectedCategory]);
 
   return (
-    <div className="bg-gray-50 mt-[-64px] h-screen">
+    <div className="bg-gray-50 mt-[-64px] min-h-screen">
       <div className="container pt-32 pb-12">
         <h1 className="text-4xl font-bold text-center">Our Projects</h1>
 
@@ -60,15 +60,15 @@ export default function ProjectsPage() {
             <div className="py-12 grid md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-12 grid-cols-1">
               {projects?.map((item) => (
                 <a
-                  href={item.link}
-                  key={item._id}
+                  href={item?.link}
+                  key={item?._id}
                   className="group block"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <div className="aspect-[3/2] shadow-sm overflow-hidden rounded-2xl relative">
                     <Image
-                      src={item.imageUrl || "/images/ecom-demo.jpg"}
+                      src={item?.imageUrl || "/images/ecom-demo.jpg"}
                       alt="Image Description"
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out rounded-2xl shadow-md"
@@ -76,13 +76,13 @@ export default function ProjectsPage() {
                   </div>
                   <div className="mt-4">
                     <h2 className="font-medium text-lg hover:underline">
-                      {item.title}
+                      {item?.title}
                     </h2>
                     <p className="mt-1 text-muted-foreground line-clamp-3">
-                      {item.description}
+                      {item?.description}
                     </p>
                     <div className="mt-3 flex flex-wrap gap-2">
-                      {item.tags.map((tagItem, index) => (
+                      {item?.tags?.map((tagItem, index) => (
                         <span
                           className="inline-flex items-center rounded-md bg-primary/10 px-3 py-1.5 text-xs sm:text-sm font-medium text-primary ring-2 ring-inset ring-primary/20"
                           key={index}
