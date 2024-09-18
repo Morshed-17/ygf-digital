@@ -15,7 +15,7 @@ export default function LandingPage() {
       </div>
 
       <div>
-        <h1 className="mb-6 text-4xl md:text-5xl lg:text-7xl font-medium leading-loose">
+        <h1 className="mb-6 text-4xl md:text-5xl lg:text-7xl font-medium md:leading-relaxed lg:leading-loose">
           <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
             Independent experts
           </span>{" "}
